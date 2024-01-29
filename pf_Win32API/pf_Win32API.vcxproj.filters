@@ -5,33 +5,45 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
-    <Filter Include="헤더 파일">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
-    </Filter>
     <Filter Include="리소스 파일">
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="소스 파일\01. Main">
+      <UniqueIdentifier>{3282b56f-64dd-4a4e-8ba1-906610381428}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\99. Headers">
+      <UniqueIdentifier>{79bdcef6-21f2-4052-8063-87f189cf661d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\99. Headers\99. Default">
+      <UniqueIdentifier>{e5ea2259-a8b2-4860-8cce-e4ad580239d7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="framework.h">
-      <Filter>헤더 파일</Filter>
+    <ClInclude Include="pf_Win32API.h">
+      <Filter>소스 파일\01. Main</Filter>
     </ClInclude>
-    <ClInclude Include="targetver.h">
-      <Filter>헤더 파일</Filter>
+    <ClInclude Include="framework.h">
+      <Filter>소스 파일\99. Headers\99. Default</Filter>
     </ClInclude>
     <ClInclude Include="Resource.h">
-      <Filter>헤더 파일</Filter>
+      <Filter>소스 파일\99. Headers\99. Default</Filter>
     </ClInclude>
-    <ClInclude Include="pf_Win32API.h">
-      <Filter>헤더 파일</Filter>
+    <ClInclude Include="targetver.h">
+      <Filter>소스 파일\99. Headers\99. Default</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="pf_Win32API.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
+    <ClInclude Include="pch.h">
+      <Filter>소스 파일\99. Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Core.h">
+      <Filter>소스 파일\01. Main</Filter>
+    </ClInclude>
+    <ClInclude Include="LIBREF.h">
+      <Filter>소스 파일\99. Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="STANDARD.h">
+      <Filter>소스 파일\99. Headers</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="pf_Win32API.rc">
@@ -45,5 +57,16 @@
     <Image Include="pf_Win32API.ico">
       <Filter>리소스 파일</Filter>
     </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="pf_Win32API.cpp">
+      <Filter>소스 파일\01. Main</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>소스 파일\99. Headers</Filter>
+    </ClCompile>
+    <ClCompile Include="Core.cpp">
+      <Filter>소스 파일\01. Main</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
