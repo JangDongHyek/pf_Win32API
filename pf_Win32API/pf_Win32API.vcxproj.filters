@@ -53,6 +53,12 @@
     <ClInclude Include="Defines.h">
       <Filter>소스 파일\99. Headers</Filter>
     </ClInclude>
+    <ClInclude Include="TimeMgr.h">
+      <Filter>소스 파일\02. Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="Types.h">
+      <Filter>소스 파일\99. Headers</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="pf_Win32API.rc">
@@ -78,6 +84,9 @@
       <Filter>소스 파일\01. Main</Filter>
     </ClCompile>
     <ClCompile Include="InputMgr.cpp">
+      <Filter>소스 파일\02. Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="TimeMgr.cpp">
       <Filter>소스 파일\02. Manager</Filter>
     </ClCompile>
   </ItemGroup>
