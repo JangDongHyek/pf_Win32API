@@ -18,6 +18,9 @@
     <Filter Include="소스 파일\99. Headers\99. Default">
       <UniqueIdentifier>{e5ea2259-a8b2-4860-8cce-e4ad580239d7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\02. Manager">
+      <UniqueIdentifier>{d7ea159f-bde0-43cd-950d-30eeae7b4374}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pf_Win32API.h">
@@ -44,6 +47,12 @@
     <ClInclude Include="STANDARD.h">
       <Filter>소스 파일\99. Headers</Filter>
     </ClInclude>
+    <ClInclude Include="InputMgr.h">
+      <Filter>소스 파일\02. Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="Defines.h">
+      <Filter>소스 파일\99. Headers</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="pf_Win32API.rc">
@@ -67,6 +76,9 @@
     </ClCompile>
     <ClCompile Include="Core.cpp">
       <Filter>소스 파일\01. Main</Filter>
+    </ClCompile>
+    <ClCompile Include="InputMgr.cpp">
+      <Filter>소스 파일\02. Manager</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
