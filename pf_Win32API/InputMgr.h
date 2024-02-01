@@ -10,8 +10,14 @@ enum class KeyType
 	Left = VK_LEFT,
 	Right = VK_RIGHT,
 
-	Q = 'Q', W = 'W', E = 'E', R = 'R',
-	A = 'A', S = 'S', D = 'D', F = 'F',
+	Q = 'Q', 
+	W = 'W', 
+	E = 'E', 
+	R = 'R',
+	A = 'A', 
+	S = 'S', 
+	D = 'D', 
+	F = 'F',
 
 	Space = VK_SPACE
 };

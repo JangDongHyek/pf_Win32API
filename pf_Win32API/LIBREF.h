@@ -98,5 +98,13 @@ BOOL TextOutW(
 ***********************************************
 
 
+static_assert( constant-expression, string-literal );
+# 함수인자내 표현식이 False일경우 에러를뱉어내고 Ture일경우 넘어간다
+# 컴파일단계에서 잡아주고 잡혔을떈 C2338로 에러를 뱉어낸다
 
+
+template <class From, class To>
+struct is_convertible;
+# From 형식이 To 형식으로 변할수있는지 체킹하는 함수
+# 올바른 형식일시 True 아닐시 False
 */

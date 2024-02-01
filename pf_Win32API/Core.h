@@ -13,6 +13,7 @@ public:
 private:
 	HWND _hwnd = {};
 	HDC _hdc = {};
-	POINT _pos = { 200,200 };
+	Pos _pos = { 200,200 };
+	POINT _size = { 200,200 };
 };
 
