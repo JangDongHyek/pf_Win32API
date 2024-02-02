@@ -15,5 +15,10 @@ private:
 	HDC _hdc = {};
 	Pos _pos = { 200,200 };
 	POINT _size = { 200,200 };
+
+private:
+	RECT _rect;
+	HDC _hdcBack = {};
+	HBITMAP _bmpBack = {};
 };
 
