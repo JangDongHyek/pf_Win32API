@@ -5,6 +5,7 @@
 #include "ResourceMgr.h"
 #include "Texture.h"
 #include "Sprite.h"
+#include "SpriteActor.h"
 
 DevScene::DevScene()
 {
@@ -26,8 +27,24 @@ void DevScene::Init()
 	GET_SINGLE(ResourceMgr)->LoadTexture(L"Edit", L"Sprite\\UI\\Edit.bmp");
 	GET_SINGLE(ResourceMgr)->LoadTexture(L"Exit", L"Sprite\\UI\\Exit.bmp");
 
+	GET_SINGLE(ResourceMgr)->CreateSprite(L"Stage01", GET_SINGLE(ResourceMgr)->GetTexture(L"Stage01"));
+	GET_SINGLE(ResourceMgr)->CreateSprite(L"Start_Off", GET_SINGLE(ResourceMgr)->GetTexture(L"Start"), 0, 0, 150, 150);
+	GET_SINGLE(ResourceMgr)->CreateSprite(L"Start_On", GET_SINGLE(ResourceMgr)->GetTexture(L"Start"), 150, 0, 150, 150);
+	GET_SINGLE(ResourceMgr)->CreateSprite(L"Edit_Off", GET_SINGLE(ResourceMgr)->GetTexture(L"Edit"), 0, 0, 150, 150);
+	GET_SINGLE(ResourceMgr)->CreateSprite(L"Edit_On", GET_SINGLE(ResourceMgr)->GetTexture(L"Edit"), 150, 0, 150, 150);
+	GET_SINGLE(ResourceMgr)->CreateSprite(L"Exit_Off", GET_SINGLE(ResourceMgr)->GetTexture(L"Exit"), 0, 0, 150, 150);
+	GET_SINGLE(ResourceMgr)->CreateSprite(L"Exit_On", GET_SINGLE(ResourceMgr)->GetTexture(L"Exit"), 150, 0, 150, 150);
+
 	Texture* texture = GET_SINGLE(ResourceMgr)->GetTexture(L"Start");
 	GET_SINGLE(ResourceMgr)->CreateSprite(L"Start_On", texture, 150, 0, 150, 150);
+
+	Sprite* sprite = GET_SINGLE(ResourceMgr)->GetSprite(L"Stage01");
+	SpriteActor* back = new SpriteActor();
+	const PosInt size = sprite->GetSize();
+	back->SetSprite(sprite);
+	back->SetPos(Pos(size.x / 2, size.y / 2));
+
+	_background = back;
 }
 
 void DevScene::Update()
@@ -42,8 +59,10 @@ void DevScene::Render(HDC hdc)
 	//::BitBlt(hdc, 0, 0, GWinSizeX, GWinSizeY, sprite->GetDC(), 0, 0, SRCCOPY);
 
 	//Sprite
-	Sprite* sprite = GET_SINGLE(ResourceMgr)->GetSprite(L"Start_On");
+	/*Sprite* sprite = GET_SINGLE(ResourceMgr)->GetSprite(L"Start_On");
 	::BitBlt(hdc, 0, 0, GWinSizeX, GWinSizeY, 
-		sprite->GetDC(), sprite->GetPos().x, sprite->GetPos().y, SRCCOPY);
+		sprite->GetDC(), sprite->GetPos().x, sprite->GetPos().y, SRCCOPY);*/
+
+	_background->Render(hdc);
 	
 }

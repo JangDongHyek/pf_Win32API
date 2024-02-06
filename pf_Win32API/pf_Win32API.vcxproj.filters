@@ -57,6 +57,12 @@
     <Filter Include="소스 파일\04. Resources\02. Sprite">
       <UniqueIdentifier>{e1ecb2d9-f635-44ef-ba55-d181a7b3ce17}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\04. Objects\02. Actor">
+      <UniqueIdentifier>{5be6babd-6647-4856-b48e-b3dbe04d577e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\04. Objects\03. SpriteActor">
+      <UniqueIdentifier>{f9e36001-b5da-489e-a5fe-71af05b32f3f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pf_Win32API.h">
@@ -128,6 +134,12 @@
     <ClInclude Include="Sprite.h">
       <Filter>소스 파일\04. Resources\02. Sprite</Filter>
     </ClInclude>
+    <ClInclude Include="Actor.h">
+      <Filter>소스 파일\04. Objects\02. Actor</Filter>
+    </ClInclude>
+    <ClInclude Include="SpriteActor.h">
+      <Filter>소스 파일\04. Objects\03. SpriteActor</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="pf_Win32API.rc">
@@ -187,6 +199,12 @@
     </ClCompile>
     <ClCompile Include="Sprite.cpp">
       <Filter>소스 파일\04. Resources\02. Sprite</Filter>
+    </ClCompile>
+    <ClCompile Include="Actor.cpp">
+      <Filter>소스 파일\04. Objects\02. Actor</Filter>
+    </ClCompile>
+    <ClCompile Include="SpriteActor.cpp">
+      <Filter>소스 파일\04. Objects\03. SpriteActor</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
